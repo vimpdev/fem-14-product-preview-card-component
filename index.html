@@ -2,14 +2,48 @@
 <html lang="en">
 
 <head>
+  <!-- Meta base -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title + SEO -->
+  <title>Product Preview Card Component | Frontend Mentor</title>
+  <meta name="description"
+    content="Responsive product card component built with semantic HTML and mobile-first CSS. Includes interactive states and clean layout.">
+  <link rel="canonical" href="https://vimpdev.github.io/fem-14-product-preview-card-component/">
+
+  <!-- UI -->
   <meta name="theme-color" content="#3C8067">
 
-  <title>Product preview card component</title>
+  <!-- Performance -->
+  <link rel="preload" href="./assets/fonts/montserrat-vf.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/fraunces-vf.woff2" as="font" type="font/woff2" crossorigin>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vimpdev.github.io/fem-14-product-preview-card-component/">
+  <meta property="og:site_name" content="VIMP Frontend Mentor Solutions">
+  <meta property="og:title" content="Product Preview Card Component | Frontend Mentor">
+  <meta property="og:description"
+    content="Responsive product card component built with semantic HTML and mobile-first CSS. Includes interactive states and clean layout.">
+  <meta property="og:image"
+    content="https://vimpdev.github.io/fem-14-product-preview-card-component/docs/preview-og.png">
+  <meta property="og:image:alt"
+    content="Interactive product preview card showing hover state on add to cart button and responsive layout design.">
 
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://vimpdev.github.io/fem-14-product-preview-card-component/">
+  <meta property="twitter:title" content="Product Preview Card Component | Frontend Mentor">
+  <meta property="twitter:description"
+    content="Responsive product card component built with semantic HTML and mobile-first CSS. Includes interactive states and clean layout.">
+  <meta property="twitter:image"
+    content="https://vimpdev.github.io/fem-14-product-preview-card-component/docs/preview-og.png">
+  <meta property="twitter:image:alt"
+    content="Interactive product preview card showing hover state on add to cart button and responsive layout design.">
+
+  <!-- Assets -->
+  <link rel="icon" href="./favicon.png" sizes="32x32" type="image/png">
   <link rel="stylesheet" href="./styles.css">
 </head>
 
@@ -18,8 +52,9 @@
   <main>
     <article class="card">
       <picture class="card-image">
-        <source media="(min-width: 768px)" srcset="./assets/images/image-product-desktop.jpg">
-        <img src="./assets/images/image-product-mobile.jpg" alt="Bottle of Gabrielle Essence Eau De Parfum by Chanel" fetchpriority="high">
+        <source media="(min-width: 48rem)" srcset="./assets/images/image-product-desktop.jpg">
+        <img src="./assets/images/image-product-mobile.jpg" alt="Bottle of Gabrielle Essence Eau De Parfum by Chanel"
+          fetchpriority="high">
       </picture>
 
       <div class="card-content">
