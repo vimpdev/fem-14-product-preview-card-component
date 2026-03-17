@@ -1,0 +1,198 @@
+/* ***************** */
+/* RESET */
+/* ***************** */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+p {
+  margin: 0;
+}
+
+picture,
+img {
+  display: block;
+  max-inline-size: 100%;
+  block-size: 100%;
+}
+
+button {
+  font: inherit;
+  border: none;
+}
+
+
+/* ***************** */
+/* FONTS */
+/* ***************** */
+
+@font-face {
+  font-family: 'Fraunces';
+  src: url('./assets/fonts/fraunces-vf.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/montserrat-vf.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+
+/* ***************** */
+/* TOKENS */
+/* ***************** */
+
+:root {
+  --green-500: hsl(158, 36%, 37%);
+  --green-700: hsl(158, 42%, 18%);
+  --black: hsl(212, 21%, 14%);
+  --grey: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+  --white: hsl(0, 0%, 100%);
+  --ff-base: 'Montserrat', sans-serif;
+  --ff-secondary: 'Fraunces', sans-serif;
+  --radius: 8px;
+}
+
+
+/* ***************** */
+/* BASE */
+/* ***************** */
+
+body {
+  min-block-size: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ff-base);
+  background-color: var(--cream);
+  color: var(--black);
+  line-height: 1.64;
+}
+
+:focus-visible {
+  outline: 2px dotted var(--green-700);
+  outline-offset: 3px;
+}
+
+
+/* ***************** */
+/* COMPONENTS */
+/* ***************** */
+
+.card {
+  margin-top: 4.1594rem;
+  inline-size: clamp(21.875rem, 88vw, 37.5rem);
+  max-inline-size: 25rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+
+  @media (width >= 48rem) {
+    max-inline-size: unset;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card-content {
+  padding: 1.85rem 2rem;
+}
+
+.card-eyebrow {
+  font-size: .75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--grey);
+}
+
+.card-title {
+  margin: 1.15rem 0 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: var(--ff-secondary);
+  line-height: 1;
+}
+
+.card-description {
+  font-size: .875rem;
+  font-weight: 500;
+  color: var(--grey);
+}
+
+.card-price {
+  margin-block: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.22rem;
+}
+
+.card-price-current {
+  font-family: var(--ff-secondary);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--green-500);
+}
+
+.card-price-original {
+  font-size: .8125rem;
+  font-weight: 500;
+  color: var(--grey);
+}
+
+.card-cta {
+  inline-size: 100%;
+  padding-block: .78rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .65rem;
+  font-size: .875rem;
+  font-weight: 700;
+  background-color: var(--green-500);
+  color: var(--white);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color .25s ease-in-out;
+
+  &:is(:hover, :focus-visible) {
+    background-color: var(--green-700);
+  }
+}
+
+.attribution {
+  padding: 1.55rem 0 1.25rem;
+  font-size: .85rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.attribution-link {
+  margin-inline: .3rem;
+  font-weight: 700;
+  text-decoration-style: wavy;
+  color: inherit;
+  transition: color .25s ease-in-out;
+
+  &:is(:hover, :focus-visible) {
+    text-decoration: none;
+    color: var(--green-700);
+  }
+}
