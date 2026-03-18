@@ -35,7 +35,7 @@ Users should be able to:
 ## 🔗 Links
 
 - 🌎 [Live site](https://vimpdev.github.io/fem-14-product-preview-card-component/)
-<!-- - 🧑‍💻 [View solution on Frontend Mentor]() -->
+- 🧑‍💻 [View solution on Frontend Mentor](https://www.frontendmentor.io/solutions/product-preview-card-component-mobile-first-and-accessible-voQcLgnuON)
 
 ---
 
